@@ -1,0 +1,12 @@
+<table>
+    <% for(var i = 0, colunas = Object.keys(results); i < colunas.length; i++) { %>
+       <tr>
+         <th><%= colunas[i] %></th>
+       </tr>
+    <% } %>
+      <tr>
+        <% for(var i = 0, colunas = Object.keys(results); i < colunas.length; i++) { %>
+         <td><%= solicitacaoCompra[colunas[i]] %></td>
+      <% } %>
+    </tr>
+  </table>
