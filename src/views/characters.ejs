@@ -18,7 +18,7 @@
 <body>
     
     <!-- Loading page -->
-    
+
     <div class="demo" id="loader-wrapper">
         <div id="loader">
             <img src="marvel.gif" style="width: 100rem; height:100 rem;" class="card-img-top" alt="...">
@@ -38,7 +38,7 @@
                                 <%= jsonValue.name %>
                             </h5>
                             <p class="card-text"> <%= jsonValue.description %></p>
-                            <a href="http://marvel.com/characters/76/a-bomb?utm_campaign=apiRef&utm_source=b11cc7da74c62b03d6758e1966324d20" class="btn btn-primary">More details</a>
+                            <a href="<%= jsonValue.resourceURI %>" class="btn btn-primary">More details</a>
                         </div>
                     </div>
                 </div>
