@@ -12,17 +12,24 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ type: 'application/vnd.api+json' }));
 app.use(express.json());
-app.use(helmet());
+
 app.use(cors());
+app.use(helmet.contentSecurityPolicy({
+      useDefaults: true,
+      directives: {
+        "img-src": ["'self'", "https: data:"]
+      }
+    })
+  )
 
 app.use(express.static('src/public'));
 app.set('view engine', 'ejs');
 app.set('views', 'src/views');
 
-app.use('/api', characterEvents);
-app.use('/api', characterComics);
-app.use('/api', characterSeries);
-app.use('/api', character);
+app.use('/', characterEvents);
+app.use('/', characterComics);
+app.use('/', characterSeries);
+app.use('/', character);
 app.use(index);
 
 module.exports = app;

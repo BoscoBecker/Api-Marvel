@@ -5,13 +5,12 @@ const yup = require('yup');
 
 
 exports.getallCharacters = async (req, res) => {
-
     try {
         let generateKeyEvents = new GenerateHash();
         let URI = `${process.env.BASE_URI}/${process.env.API_VERSION}/public/characters?ts=${generateKeyEvents.ts}&apikey=${process.env.PUBLIC_KEY}&hash=${generateKeyEvents.hashvalue}`;
         let GetallCharacters = await axios.get(URI);
-        
-        res.status(200).json(GetallCharacters.data.data.results);
+        let jsonValue = await GetallCharacters.data.data.results; //GetallCharacters.data.data.results;        
+        res.render('characters', { jsonValue: jsonValue });   //status(200).json(GetallCharacters.data.data.results);
     } catch (error) {
         res.status(500).json({
             success: false,
@@ -22,7 +21,6 @@ exports.getallCharacters = async (req, res) => {
 
 
 exports.getCharactersById = async (req, res) => {
-    
     try {
         const id = req.params.id;
         let generateKeyEvents = new GenerateHash();

@@ -3,7 +3,6 @@ const yup = require('yup');
 const GenerateHash = require('../helpers/generate.hash');
 
 exports.getCharacterSeriesById = async (req, res) => {
-
     try {
         const id = req.params.id;
         const schema = yup.object().shape({
