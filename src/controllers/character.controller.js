@@ -11,8 +11,8 @@ exports.getallCharacters = async (req, res) => {
         let GetallCharacters = await axios.get(URI);
         
         let jsonValue = await GetallCharacters.data.data.results; 
-        let url = `?ts=${generateKeyEvents.ts}&apikey=${process.env.PUBLIC_KEY}&hash=${generateKeyEvents.hashvalue}`;
-        
+        let url = `?ts=${generateKeyEvents.ts}&apikey=${process.env.PUBLIC_KEY}&hash=${generateKeyEvents.hashvalue}`;        
+
         res.render( 'characters', { jsonValue: jsonValue, url: url } );  
     } catch (error) {
         res.status(500).json({
