@@ -28,8 +28,8 @@ http://localhost:3000/characters/:id/series -- Stories
 ![image](https://user-images.githubusercontent.com/6303278/168331526-b4285449-e6af-4b2e-9a92-561335c33904.png)
 
 
-` npm install ` 
-` nodemon server.js`
+Installing dependencies ` npm install ` 
+start server ` nodemon server.js`
 
 
 
