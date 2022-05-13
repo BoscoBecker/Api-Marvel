@@ -5,6 +5,7 @@ Exploring the Marvel Api
 ## Routes characters
 
 http://localhost:3000/characters
+
 http://localhost:3000/characters/:id
 
 ## Routes comics
