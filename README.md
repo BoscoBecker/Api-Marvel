@@ -1,7 +1,8 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBoscoBecker%2FApi-Marvel.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBoscoBecker%2FAApi-Marvel?ref=badge_shield)
+
 # Api-Marvel in progress 20% ...
 
-Exploring the Marvel Api
+# Exploring the Marvel Api
 
 ## Routes /characters
 
@@ -27,8 +28,10 @@ http://localhost:3000/characters/:id/series -- Stories
 
 ![image](https://user-images.githubusercontent.com/6303278/168331526-b4285449-e6af-4b2e-9a92-561335c33904.png)
 
+# Run then Project
 
 Installing dependencies ` npm install ` 
+
 start server ` nodemon server.js`
 
 
