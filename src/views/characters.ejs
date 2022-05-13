@@ -15,9 +15,22 @@
     <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
-    
-    <!-- Loading page -->
+<body style="background-color:rgb(190,15,4);">
+
+	<header>
+		<div class="inner">
+			<div class="logo"><img src="../Marvel-Logo.jpg"></div>
+			<div class="burger"></div>
+			<nav>
+				<a class="active" href="#">Marvel</a>
+				<a href="#">Characters</a>
+				<a href="#">Comics</a>
+				<a href="#">About</a>
+			</nav>
+			<a href="#" class="donate-link">Donate</a>
+		</div>
+	</header>
+
 
     <div class="demo" id="loader-wrapper">
         <div id="loader">
@@ -36,9 +49,8 @@
                         <div class="card-body">
                             <h5 class="card-title">
                                 <%= jsonValue.name %>
-                            </h5>
-                            <p class="card-text"> <%= jsonValue.description %></p>
-                            <a href="<%= jsonValue.resourceURI %>" class="btn btn-primary">More details</a>
+                            </h5>                            
+                            <a href="<%= jsonValue.resourceURI %>" class="btn btn-danger">More details</a>
                         </div>
                     </div>
                 </div>
