@@ -3,20 +3,23 @@
 
 Exploring the Marvel Api
 
-## Routes characters
+## Routes /characters
 
-http://localhost:3000/characters
+http://localhost:3000/characters -- characters
 
-http://localhost:3000/characters/:id
+http://localhost:3000/characters/:id -- characters
 
-## Routes comics
-http://localhost:3000/characters/:id/comics
+http://localhost:3000/characters/:id/comics -- comics
 
-## Routes Events
-http://localhost:3000/characters/:id/events
+http://localhost:3000/characters/:id/events -- events
 
-## Routes Series
-http://localhost:3000/characters/:id/series
+http://localhost:3000/characters/:id/series -- Series
+
+http://localhost:3000/characters/:id/series -- Stories
+
+## Routes /comics
+
+ 
 
 
 ## Front Usando Express + EJS
