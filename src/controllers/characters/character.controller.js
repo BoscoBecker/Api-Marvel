@@ -1,7 +1,7 @@
 const axios = require('axios');
-const env = require('../config/env');
-const GenerateHash = require('../helpers/generate.hash');
 const yup = require('yup');
+const env = require('../../config/env');
+const GenerateHash = require('../../helpers/generate.hash'); 
 
 
 exports.getallCharacters = async (req, res) => {

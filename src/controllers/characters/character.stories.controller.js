@@ -1,6 +1,7 @@
 const axios = require('axios');
 const yup = require('yup');
-const GenerateHash = require('../helpers/generate.hash');
+const env = require('../../config/env');
+const GenerateHash = require('../../helpers/generate.hash');
 
 exports.getCharacterStoriesById = async (req, res) => {
     try {

@@ -1,7 +1,6 @@
 const axios = require('axios');
-const env = require('dotenv');
 const yup = require('yup');
-const GenerateHash = require('../helpers/generate.hash');
+const GenerateHash = require('../../helpers/generate.hash'); 
 
 exports.getCharacterEventsById = async (req, res) => {
     try {

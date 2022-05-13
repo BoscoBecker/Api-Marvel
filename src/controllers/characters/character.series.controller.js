@@ -1,6 +1,7 @@
 const axios = require('axios');
 const yup = require('yup');
-const GenerateHash = require('../helpers/generate.hash');
+const env = require('../../config/env');
+const GenerateHash = require('../../helpers/generate.hash'); 
 
 exports.getCharacterSeriesById = async (req, res) => {
     try {
@@ -18,9 +19,9 @@ exports.getCharacterSeriesById = async (req, res) => {
 
         let generateKeySeries = new GenerateHash();
         let URI = `${process.env.BASE_URI}/${process.env.API_VERSION}/public/characters/${id}/series?ts=${generateKeySeries.ts}&apikey=${process.env.PUBLIC_KEY}&hash=${generateKeySeries.hashvalue}`;
-        let GetCharacterSeriesById = await axios.get(URI);
+        let responseUri = await axios.get(URI);
 
-        res.status(200).json(GetCharacterSeriesById.data.data.results);
+        res.status(200).json(responseUri.data.data.results);
 
     } catch (error) {
         res.status(500).json({

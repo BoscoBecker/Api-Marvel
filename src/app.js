@@ -2,11 +2,12 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-const characterSeries = require('./routes/character.series.routes');
-const characterEvents = require('./routes/character.events.routes');
-const characterComics = require('./routes/character.comics.routes');
-const characterStories = require('./routes/character.stories.routes');
-const character = require('./routes/character.routes');
+
+const characterSeries = require('./routes/characters/character.series.routes');
+const characterEvents = require('./routes/characters/character.events.routes');
+const characterComics = require('./routes/characters/character.comics.routes');
+const characterStories = require('./routes/characters/character.stories.routes');
+const character = require('./routes/characters/character.routes');
 const index = require('./routes/index');
 
 const app = express();
