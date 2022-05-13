@@ -4,9 +4,8 @@ module.exports = class GenerateHash {
 
      constructor() {
         let time = new Date();
-        let ts = time.getTime();
+        let ts = time.getTime();        
         
-        console.log(process.env.PRIVATE_KEY + process.env.PUBLIC_KEY);
         let hashvalue = md5( ts + process.env.PRIVATE_KEY + process.env.PUBLIC_KEY );
         
         this.time = new Date();
